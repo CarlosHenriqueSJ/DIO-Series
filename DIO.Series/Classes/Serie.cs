@@ -4,8 +4,9 @@ namespace DIO.Series
 {
     public class Serie :EntidadeBase
     {
-        public Serie(Genero genero, string titulo, string descricao, int ano, bool excluido)
+        public Serie(int id, Genero genero, string titulo, string descricao, int ano)
         {
+            Id = id;
             Genero = genero;
             Titulo = titulo;
             Descricao = descricao;
@@ -31,7 +32,7 @@ namespace DIO.Series
             retorno += "Excluido: " + this.Excluido;
 			return retorno;
 		}
-        public String retornarTitulo()
+        public String retornaTitulo()
         {
             return this.Titulo;
         }

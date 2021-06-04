@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using DIO.Series.Interfaces;
 
-namespace DIO.Series.Classes
+namespace DIO.Series
 {
     public class SerieRepositorio : IRepositorio<Serie>
     {
@@ -12,12 +12,12 @@ namespace DIO.Series.Classes
            listaSerie[id] = entidade;
         }
 
-        public void Excluir(int id)
+        public void Exclui(int id)
         {
             listaSerie[id].excluir();
         }
 
-        public void Insert(Serie entidade)
+        public void Insere(Serie entidade)
         {
            listaSerie.Add(entidade);
         }
